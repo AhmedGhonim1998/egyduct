@@ -1,0 +1,82 @@
+<footer class="bg-[#001f55] text-slate-300">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-7xl mx-auto">
+
+        <!-- Brand -->
+        <div class="space-y-6">
+          <div class="text-xl font-black text-white font-['Space_Grotesk'] tracking-tighter">Egy Duct</div>
+          <p class="text-sm leading-relaxed text-slate-300">
+            Precision engineered ventilation and HVAC solutions for Egypt's leading industrial and
+            commercial sectors. Founded 2017. Authorized Nicotra Gebhardt Partner.
+          </p>
+          <div class="flex gap-4">
+            <span class="material-symbols-outlined hover:text-[#1dc3ff] cursor-pointer transition-colors">public</span>
+            <span class="material-symbols-outlined hover:text-[#1dc3ff] cursor-pointer transition-colors">apartment</span>
+            <span class="material-symbols-outlined hover:text-[#1dc3ff] cursor-pointer transition-colors">verified</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Quick Links</h4>
+          <ul class="space-y-4">
+            <li *ngFor="let link of quickLinks">
+              <a [href]="link.href"
+                class="text-slate-400 hover:text-[#1dc3ff] transition-colors duration-200 block hover:translate-x-1 transition-transform text-sm">
+                {{ link.label }}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Certifications -->
+        <div>
+          <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Certifications</h4>
+          <ul class="space-y-3">
+            <li *ngFor="let cert of certifications"
+              class="text-slate-400 text-sm flex items-start gap-2">
+              <span class="material-symbols-outlined text-[#1dc3ff] text-sm mt-0.5">check_circle</span>
+              {{ cert }}
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact from PDF -->
+        <div>
+          <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Contact</h4>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-2 text-slate-400 text-sm">
+              <span class="material-symbols-outlined text-sm mt-0.5">call</span>
+              <div>
+                02 27752807<br/>
+                012 8534 3418
+              </div>
+            </li>
+            <li class="flex items-start gap-2 text-slate-400 text-sm">
+              <span class="material-symbols-outlined text-sm mt-0.5">mail</span>
+              <div>
+                info&#64;egyduct.com<br/>
+                tender&#64;egyduct.com
+              </div>
+            </li>
+            <li class="flex items-start gap-2 text-slate-400 text-sm">
+              <span class="material-symbols-outlined text-sm mt-0.5">location_on</span>
+              <div>
+                16th Al Khartoum St., Masr Al Gadida<br/>
+                B-Hub Building, 4th Floor, Cairo
+              </div>
+            </li>
+            <li class="flex items-start gap-2 text-slate-400 text-sm">
+              <span class="material-symbols-outlined text-sm mt-0.5">factory</span>
+              Industrial Zone, Qalyubia – Cairo
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/5 py-8 text-center">
+        <p class="text-xs text-slate-400">
+          © {{ currentYear }} Egy Duct · Ventilation Solution · www.egyduct.com
+        </p>
+      </div>
+    </footer>

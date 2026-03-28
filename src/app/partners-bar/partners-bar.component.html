@@ -1,0 +1,14 @@
+<section class="bg-[#000b28] text-white py-12">
+      <div class="max-w-[1440px] mx-auto px-8">
+        <p class="text-center text-[10px] font-bold tracking-[0.3em] uppercase opacity-50 mb-8">
+          Engineering Partners &amp; Major Clients
+        </p>
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 hover:opacity-100 transition-all">
+          <span *ngFor="let client of clients"
+            class="text-lg font-bold tracking-tighter font-['Space_Grotesk'] hover:text-[#1dc3ff] transition-colors cursor-default">
+            {{ client }}
+          </span>
+        </div>
+      </div>
+    </section>
+  `,

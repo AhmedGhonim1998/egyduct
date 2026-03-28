@@ -1,0 +1,75 @@
+<section class="relative min-h-screen pt-24 flex flex-col items-center justify-center overflow-hidden bg-[#e1f7ff]">
+
+      <!-- Abstract blobs -->
+      <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+        <div class="absolute top-1/4 -right-20 w-[600px] h-[600px] bg-[#1dc3ff] rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-1/4 -left-20 w-[400px] h-[400px] bg-[#4585ff] rounded-full blur-[100px]"></div>
+      </div>
+
+      <div class="relative z-10 max-w-[1440px] mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Left Content -->
+        <div class="lg:col-span-7 space-y-8">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#000b28] text-white text-[10px] font-bold tracking-[0.2em] uppercase">
+            <span class="w-2 h-2 bg-[#1dc3ff] animate-pulse rounded-full"></span>
+            Since 2017 · Industrial Zone Qalyubia, Cairo
+          </div>
+
+          <h1 class="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter text-[#000b28]">
+            Ventilation <br/>
+            <span class="text-[#006688]">Solution</span><br/>
+            Experts.
+          </h1>
+
+          <p class="max-w-xl text-lg md:text-xl text-[#44464f] leading-relaxed">
+            Egy Duct Corporate established to support the local market by producing &amp; providing a
+            complete range of Ventilation Solutions with national/international technologies.
+            Serving clients the Right Services at the Right Time and the Right Value.
+          </p>
+
+          <!-- Key Facts from PDF -->
+          <div class="grid grid-cols-3 gap-4 pt-4">
+            <div class="bg-white/60 backdrop-blur-sm p-4 border-l-2 border-[#1dc3ff]">
+              <div class="text-2xl font-black text-[#000b28]">2017</div>
+              <div class="text-xs text-[#44464f] uppercase tracking-widest mt-1">Founded</div>
+            </div>
+            <div class="bg-white/60 backdrop-blur-sm p-4 border-l-2 border-[#1dc3ff]">
+              <div class="text-2xl font-black text-[#000b28]">AMCA</div>
+              <div class="text-xs text-[#44464f] uppercase tracking-widest mt-1">Certified</div>
+            </div>
+            <div class="bg-white/60 backdrop-blur-sm p-4 border-l-2 border-[#1dc3ff]">
+              <div class="text-2xl font-black text-[#000b28]">BS EN</div>
+              <div class="text-xs text-[#44464f] uppercase tracking-widest mt-1">12101-3 Compliant</div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4 pt-4">
+            <button class="px-8 py-4 bg-[#000b28] text-white font-bold uppercase tracking-widest text-sm hover:translate-y-[-2px] transition-transform">
+              Request a Quote
+            </button>
+            <button class="px-8 py-4 border border-[#c5c6d1] text-[#000b28] font-bold uppercase tracking-widest text-sm hover:bg-[#cfe6ee] transition-colors">
+              Download Profile
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Images -->
+        <div class="lg:col-span-5 relative">
+          <div class="aspect-square bg-white shadow-2xl p-4 rotate-3 hover:rotate-0 transition-transform duration-500 overflow-hidden">
+            <img
+              class="w-full h-full object-cover"
+              [src]="heroMainImage"
+              alt="High-tech industrial ventilation unit"
+            />
+          </div>
+          <div class="absolute -bottom-10 -left-10 w-48 aspect-square bg-[#006688] p-2 -rotate-6 shadow-xl hidden md:block overflow-hidden">
+            <img
+              class="w-full h-full object-cover"
+              [src]="heroSecondaryImage"
+              alt="Industrial axial fan blades"
+            />
+          </div>
+        </div>
+
+      </div>
+    </section>

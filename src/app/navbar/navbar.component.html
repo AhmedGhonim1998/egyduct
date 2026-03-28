@@ -1,0 +1,30 @@
+ <nav class="fixed top-0 w-full z-50 bg-[#001f55]/90 backdrop-blur-md">
+      <div class="flex justify-between items-center px-8 py-4 max-w-[1440px] mx-auto">
+ 
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <div class="h-10 w-10 rounded-full bg-gradient-to-br from-pink-500 to-cyan-400 flex items-center justify-center">
+            <span class="text-white font-black text-sm">ED</span>
+          </div>
+          <span class="text-2xl font-black text-white font-['Space_Grotesk'] tracking-tighter">Egy Duct</span>
+        </div>
+ 
+        <!-- Nav Links -->
+        <div class="hidden md:flex gap-8 items-center">
+          <a
+            *ngFor="let link of navLinks"
+            [href]="link.href"
+            [class]="link.active
+              ? 'font-[Space_Grotesk] uppercase tracking-[0.05em] text-sm font-bold text-[#16c3ff] border-b-2 border-[#16c3ff] pb-1 transition-all duration-300'
+              : 'font-[Space_Grotesk] uppercase tracking-[0.05em] text-sm font-semibold text-white/70 hover:text-white transition-all duration-300'"
+          >
+            {{ link.label }}
+          </a>
+        </div>
+ 
+        <!-- CTA -->
+        <button class="bg-[#1dc3ff] text-[#001f55] px-6 py-2.5 font-['Space_Grotesk'] font-bold uppercase tracking-wider text-xs active:scale-[0.97] transition-transform">
+          Request a Quote
+        </button>
+      </div>
+    </nav>

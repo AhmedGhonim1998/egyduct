@@ -1,0 +1,98 @@
+<p>products works!</p>
+<section id="products" class="py-24 px-8 max-w-[1440px] mx-auto bg-[#f1fbff]">
+
+      <div class="mb-16">
+        <span class="text-[#006688] font-bold tracking-[0.2em] uppercase text-xs">Nicotra Gebhardt Range</span>
+        <h2 class="text-4xl md:text-6xl font-black text-[#000b28] tracking-tighter mt-2 mb-4">
+          Product Showcase
+        </h2>
+        <div class="h-1 w-24 bg-[#006688]"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+        <!-- Axial Fans - large tall card -->
+        <div class="md:col-span-2 md:row-span-2 bg-white group overflow-hidden relative min-h-[600px]">
+          <img
+            class="w-full h-full object-cover absolute inset-0 opacity-90 group-hover:scale-110 transition-transform duration-700"
+            [src]="axialImage"
+            alt="Industrial axial fan"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#000b28]/90 to-transparent flex flex-col justify-end p-8">
+            <span class="text-[#1dc3ff] font-bold text-xs tracking-widest uppercase mb-2">ADTA / ADTA-F · AFK / AFQ · ABE</span>
+            <h3 class="text-3xl font-bold text-white mb-2">Axial Fans</h3>
+            <p class="text-white/70 text-sm max-w-sm mb-3">
+              High-performance airflow for commercial and industrial spaces.
+              Volume flow up to 170,000 m³/h · Pressure up to 650 Pa
+            </p>
+            <div class="flex gap-4 text-xs text-white/50">
+              <span>AMCA Certified</span>
+              <span>·</span>
+              <span>BS EN 12101-3</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Smoke Extract Fans -->
+        <div class="md:col-span-2 bg-[#dbf2fa] group overflow-hidden relative min-h-[300px]">
+          <img
+            class="w-full h-full object-cover absolute inset-0 opacity-80 group-hover:scale-105 transition-transform duration-700"
+            [src]="smokeImage"
+            alt="Smoke management system"
+          />
+          <div class="absolute inset-0 bg-gradient-to-r from-[#081e24]/80 to-transparent flex flex-col justify-center p-8">
+            <span class="text-[#1dc3ff] font-bold text-xs tracking-widest uppercase mb-2">ADTA-F · REM BU · RWM · CP-S</span>
+            <h3 class="text-2xl font-bold text-white mb-2">Smoke Extract Fans</h3>
+            <p class="text-white/70 text-xs max-w-xs mb-2">
+              Safety-critical systems: 250°C / 300°C / 400°C / 600°C for 2 hrs.
+              Volume flow up to 170,000 m³/h
+            </p>
+          </div>
+        </div>
+
+        <!-- Cabinet Fans -->
+        <div class="bg-[#1dc3ff] p-8 flex flex-col justify-between group cursor-pointer hover:bg-[#006688] transition-colors duration-300">
+          <div>
+            <span class="text-[#001f55] text-xs font-bold uppercase tracking-widest">CP / CP-S Series</span>
+            <h3 class="text-xl font-bold text-[#001f55] group-hover:text-white transition-colors mt-2">
+              Cabinet Fans
+            </h3>
+            <p class="text-[#001f55]/70 group-hover:text-white/70 text-xs mt-2">
+              Volume flow up to 125,000 m³/h · Pressure up to 1,200 Pa
+            </p>
+          </div>
+          <span class="text-[#001f55] group-hover:text-white font-bold text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">
+            Technical Specs
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </span>
+        </div>
+
+        <!-- Industrial Process Fans -->
+        <div class="bg-[#cfe6ee] p-8 flex flex-col justify-between group cursor-pointer hover:bg-[#000b28] transition-colors duration-300">
+          <div>
+            <span class="text-[#006688] group-hover:text-[#1dc3ff] text-xs font-bold uppercase tracking-widest transition-colors">P2M · P4M · Q2M Series</span>
+            <h3 class="text-xl font-bold text-[#000b28] group-hover:text-white transition-colors mt-2">
+              Industrial Process Fans
+            </h3>
+            <p class="text-[#000b28]/70 group-hover:text-white/70 text-xs mt-2">
+              Volume flow up to 200,000 m³/h · Pressure up to 8,000 Pa
+            </p>
+          </div>
+          <span class="text-[#006688] group-hover:text-[#1dc3ff] font-bold text-xs uppercase tracking-widest flex items-center gap-1 transition-colors">
+            Technical Specs
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </span>
+        </div>
+
+      </div>
+
+      <!-- Extra products row -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+        <div *ngFor="let p of extraProducts"
+          class="bg-white border border-[#cfe6ee] p-6 hover:border-[#1dc3ff] transition-colors group cursor-pointer">
+          <h4 class="font-bold text-[#000b28] group-hover:text-[#006688] transition-colors mb-1">{{ p.title }}</h4>
+          <p class="text-xs text-[#44464f]">{{ p.specs }}</p>
+        </div>
+      </div>
+
+    </section>
