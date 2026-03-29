@@ -168,7 +168,9 @@ majorClients = [
   { name: 'Carrefour', logo: './images/carrefour.png' },
   { name: 'Farm Frites', logo: './images/farm.png' },
   { name: 'GUC', logo: './images/guc.png' },
-  { name: 'El Soadaa', logo: './images/1630570399540-removebg-preview.png' }
+  { name: 'El Soadaa', logo: './images/1630570399540-removebg-preview.png' },
+  { name: 'Minstry of communication', logo: './images/20231126120517_وزارة_الاتصالات_وتكنولوجيا_المعلومات-removebg-preview.png' },
+  { name: 'EL Hayaa El Handasya', logo: './images/الهيئة_الهندسية-removebg-preview.png' }
 ];
 
   // Contact details
