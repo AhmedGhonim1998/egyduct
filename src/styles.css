@@ -1112,34 +1112,3 @@ p {
 
 
 
-@keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
-}
-
-.animate-marquee {
-  display: flex;
-  width: max-content;
-  animation: marquee 30s linear infinite;
-}
-
-.animate-marquee:hover {
-  animation-play-state: paused; /* الحركة تقف لما اليوزر يقف بالماوس */
-}
-
-
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* بيتحرك لنص المسافة عشان التكرار */
-}
-
-.animate-marquee {
-  display: flex;
-  width: max-content;
-  animation: marquee 40s linear infinite; /* تحكم في السرعة من هنا (40s) */
-}
-
-/* لو اليوزر وقف بالماوس، الحركة تقف عشان يركز في اللوجو */
-.animate-marquee:hover {
-  animation-play-state: paused;
-}
