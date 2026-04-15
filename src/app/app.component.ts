@@ -201,32 +201,32 @@ majorClients = [
     description: 'High-performance airflow. Certified for Sound & Air performance by AMCA.'
   },
   {
-    name: 'Axial Fan',
+    name: 'Centrifugal Fans',
     series: 'AFK / AFQ',
      image: './productImages/2.png',
     description: 'Safety-critical: Certified 400°C for 120 minutes (BS EN 12101-3).'
   },
   {
-    name: 'Smoke Extract Fan',
+    name: 'Rooftop Extraction',
     series: 'RDM 56/57',
      image: './productImages/3.png',
     description: 'Specialized for Car Parks and Tunnels with high thrust performance.'
   },
   {
-    name: 'Smoke Extract Fan',
+    name: 'Cleanrooms Solutions for',
     series: 'REM BU',
      image: './productImages/4.png',
     description: 'Volume flow up to 125,000 m³/h with low noise enclosure.'
   },
   {
-    name: 'Smoke Extract Fan',
-    series: 'RWM',
+    name: 'Axial inline (300°/400°)',
+    series: 'Smoke Extract Fan RDM 56/57',
      image: './productImages/5.png',
     description: 'Weather-proof vertical and horizontal discharge units.'
   },
   {
-    name: 'Smoke Extract Fan',
-    series: 'RER 13/17 400 C',
+    name: 'Centrifugal Fire-rated (Direct Driven / Belt Driven)',
+    series: 'Smoke Extract Fan RER 13/17 400 C',
      image: './productImages/6.png',
     description: 'High pressure up to 8,000 Pa for industrial manufacturing.'
   },
