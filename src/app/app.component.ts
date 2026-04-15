@@ -17,7 +17,8 @@ import { HostListener } from '@angular/core';
 })
 export class AppComponent {
  // بيانات الشركة من الملف الرسمي
-
+categories = ['All', 'Axial Fans', 'Centrifugal Fans', 'Fan Sections', 'Jet Fans', 'Smoke Extraction Fans', 'Rooftop Extraction', 'Cleanroom Solutions', 'ATEX Fans'];
+selectedCategory = 'All';
 
  isScrolled = false;
  @HostListener('window:scroll', [])
@@ -193,50 +194,160 @@ majorClients = [
   currentYear = new Date().getFullYear();
 
 
-  products: any[] = [
+ products = [
+  // ───────────── AXIAL FANS ─────────────
   {
-    name: 'Axial Fan',
-    series: 'ABE',
+    name: 'Axial Fan (Wall Mounted)',
+    series: 'Axial Fans',
+    category: 'Axial Fans',
     image: './productImages/1.png',
-    description: 'High-performance airflow. Certified for Sound & Air performance by AMCA.'
+    specs: ['Wall Mounted', 'High Airflow'],
+    description: 'Wall mounted axial fan solutions for commercial and industrial ventilation.'
   },
   {
-    name: 'Centrifugal Fans',
-    series: 'AFK / AFQ',
-     image: './productImages/2.png',
-    description: 'Safety-critical: Certified 400°C for 120 minutes (BS EN 12101-3).'
+    name: 'Circular inline',
+    series: 'Axial Fans',
+    category: 'Axial Fans',
+    image: './productImages/cam.png',
+    specs: ['Circular Inline', 'Compact Design'],
+    description: 'Circular inline axial fans for duct-integrated ventilation systems.'
+  },
+   {
+    name: 'Short/Long Casing',
+    series: 'Axial Fans',
+    category: 'Axial Fans',
+    image: './productImages/5.png',
+    specs: ['Backward Blades', 'High Efficiency'],
+    description: 'Backward-blade centrifugal fans offering high static efficiency for demanding applications.'
+  },
+
+  // ───────────── CENTRIFUGAL FANS ─────────────
+  
+ 
+  {
+    name: 'Centrifugal Fan – Single Inlet Single Width (SISW)',
+    series: 'Single Inlet Single Width',
+    category: 'Centrifugal Fans',
+    image: './productImages/6.png',
+    specs: ['Single Inlet', 'Single Width (SISW)'],
+    description: 'Single inlet single width centrifugal fans for space-efficient ducted systems.'
   },
   {
-    name: 'Rooftop Extraction',
-    series: 'RDM 56/57',
-     image: './productImages/3.png',
-    description: 'Specialized for Car Parks and Tunnels with high thrust performance.'
+    name: 'Double inlet Double Width ',
+    series: 'Centrifugal Fans',
+    category: 'Centrifugal Fans',
+    image: './productImages/2.png',
+    specs: ['Circular Inline', 'Compact Design'],
+    description: 'Circular inline axial fans for duct-integrated ventilation systems.'
   },
   {
-    name: 'Cleanrooms Solutions for',
-    series: 'REM BU',
-     image: './productImages/4.png',
-    description: 'Volume flow up to 125,000 m³/h with low noise enclosure.'
+    name: 'Single inlet single Width (SISW)',
+    series: 'Centrifugal Fans',
+    category: 'Centrifugal Fans',
+    image: './productImages/Picture6.png',
+    specs: ['Circular Inline', 'Compact Design'],
+    description: 'Circular inline axial fans for duct-integrated ventilation systems.'
   },
+
+  // ───────────── FAN SECTIONS ─────────────
+  {
+    name: 'Fan Sections',
+    series: 'Centrifugal Fans',
+    category: 'Fan Sections',
+    image: './productImages/7.png',
+    specs: ['Modular Design', 'Custom Configurations'],
+    description: 'Modular fan sections for integration into air handling units and HVAC systems.'
+  },
+
+  // ───────────── JET FANS ─────────────
+  {
+    name: 'Jet Fans',
+    series: 'Jet Fans',
+    category: 'Jet Fans',
+    image: './productImages/8.png',
+    specs: ['High Velocity', 'Tunnel Ventilation'],
+    description: 'Jet fans designed for car parks, tunnels, and large open-space ventilation.'
+  },
+
+  // ───────────── SMOKE EXTRACTION FANS ─────────────
+  
   {
     name: 'Axial inline (300°/400°)',
-    series: 'Smoke Extract Fan RDM 56/57',
-     image: './productImages/5.png',
-    description: 'Weather-proof vertical and horizontal discharge units.'
+    series: 'Axial Inline',
+    category: 'Smoke Extraction Fans',
+    image: './productImages/5.png',
+    specs: ['400°C Rated', 'Axial Inline', 'EN 12101-3'],
+    description: 'High-temperature axial inline smoke extract fan rated for 400°C continuous operation.'
   },
   {
-    name: 'Centrifugal Fire-rated (Direct Driven / Belt Driven)',
-    series: 'Smoke Extract Fan RER 13/17 400 C',
-     image: './productImages/6.png',
-    description: 'High pressure up to 8,000 Pa for industrial manufacturing.'
+    name: 'Smoke Extraction Fan – Centrifugal Fire-Rated (Direct Driven)',
+    series: 'Centrifugal Fire-Rated',
+    category: 'Smoke Extraction Fans',
+    image: './productImages/6.png',
+    specs: ['Direct Driven', 'Fire Rated', 'EN 12101-3'],
+    description: 'Direct driven centrifugal fire-rated smoke extraction fan for high-rise and industrial buildings.'
   },
   {
-    name: 'Smoke Extract Fan',
-    series: 'CP-s',
-    image: './productImages/7.png',
-    description: 'High-efficiency fans with aerofoil blades for HVAC systems.'
-  }
+    name: 'Smoke Extraction Fan – Centrifugal Fire-Rated (Belt Driven)',
+    series: 'Centrifugal Fire-Rated',
+    category: 'Smoke Extraction Fans',
+    image: './productImages/Picture7.png',
+    specs: ['Belt Driven', 'Fire Rated', 'EN 12101-3'],
+    description: 'Belt driven centrifugal fire-rated smoke extraction fan offering flexible speed adjustment.'
+  },
+
+  // ───────────── ROOFTOP EXTRACTION ─────────────
+  
+  {
+    name: 'Rooftop Extraction Fan',
+    series: 'Rooftop Extraction',
+    category: 'Rooftop Extraction',
+    image: './productImages/3.png',
+    specs: ['Short Casing', 'Long Casing'],
+    description: 'Available in short and long casing configurations for flexible installation.'
+  },
+  
+
+  // ───────────── CLEANROOM SOLUTIONS ─────────────
+  
+  {
+    name: 'Pharmaceutical',
+    series: 'Cleanroom Solutions',
+    category: 'Cleanroom Solutions',
+    image: './productImages/15.png',
+    specs: ['GMP Compliant', 'Pharmaceutical Grade'],
+    description: 'Pharmaceutical-grade cleanroom ventilation systems meeting strict GMP requirements.'
+  },
+  {
+    name: 'Food and Beverage',
+    series: 'Cleanroom Solutions',
+    category: 'Cleanroom Solutions',
+    image: './productImages/4.png',
+    specs: ['Forward Blades', 'Double Inlet Double Width (DIDW)'],
+    description: 'High-capacity forward-blade centrifugal fans with double inlet double width design.'
+  },
+  
+  
+
+  // ───────────── ATEX FANS ─────────────
+  {
+    name: 'ATEX Certified Fan',
+    series: 'ATEX Approved',
+    category: 'ATEX Fans',
+    image: './productImages/17.png',
+    specs: ['ATEX Approved', 'Gas & Dust Environments', 'Ex-rated'],
+    description: 'ATEX approved and certified fans engineered for safe operation in explosive gas and dusty environments.'
+  },
 ];
+
+get filteredProducts() {
+  if (this.selectedCategory === 'All') return this.products;
+  return this.products.filter(p => p.category === this.selectedCategory);
+}
+
+setCategory(cat: string) {
+  this.selectedCategory = cat;
+}
 
 
 
